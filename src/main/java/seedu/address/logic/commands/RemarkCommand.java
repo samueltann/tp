@@ -41,6 +41,19 @@ public class RemarkCommand extends Command {
         this.index = index;
         this.remark = remark;
     }
+
+    /**
+     * Executes the command to edit the {@code Remark} of a {@code Person} in the address book.
+     * <p>
+     * Retrieves the person to edit from the last shown list, replaces it with a new {@code Person}
+     * containing the updated remark (while keeping all other fields unchanged), and updates the model.
+     * </p>
+     *
+     * @param model The {@code Model} which the command should operate on.
+     * @return A {@code CommandResult} containing the success message after the remark has been updated.
+     * @throws CommandException If the provided index is invalid (i.e., out of bounds of the last shown list).
+     */
+
     @Override
     public CommandResult execute(Model model) throws CommandException {
         List<Person> lastShownList = model.getFilteredPersonList();
