@@ -13,9 +13,11 @@ import seedu.address.model.Model;
 import seedu.address.model.person.Person;
 import seedu.address.model.person.Remark;
 
-//...
+/**
+ * Edits the remark of an existing person in the address book.
+ */
 public class RemarkCommand extends Command {
-    //...
+
     public static final String MESSAGE_ARGUMENTS = "Index: %1$d, Remark: %2$s";
     public static final String COMMAND_WORD = "remark";
     public static final String MESSAGE_USAGE = COMMAND_WORD + ": Edits the remark of the person identified "
