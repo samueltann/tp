@@ -18,41 +18,50 @@ You can reach us at the email `seer[at]comp.nus.edu.sg`
 
 * Role: Project Advisor
 
-### Jane Doe
+### Michelle Liew
 
-<img src="images/johndoe.png" width="200px">
+<img src="images/michelle.png" width="200px">
+[[github](http://github.com/miche1111e)]
+[[portfolio](team/michelle.md)]
 
-[[github](http://github.com/johndoe)]
-[[portfolio](team/johndoe.md)]
-
-* Role: Team Lead
+* Role: Developer
 * Responsibilities: UI
 
-### Johnny Doe
+### Tony Victar
 
-<img src="images/johndoe.png" width="200px">
+<img src="images/tonyvict.png" width="200px">
 
-[[github](http://github.com/johndoe)] [[portfolio](team/johndoe.md)]
+[[github](http://github.com/tonyvict)] [[portfolio](team/tonyvict.md)]
 
 * Role: Developer
 * Responsibilities: Data
 
-### Jean Doe
+### Chai Jiacheng 
 
-<img src="images/johndoe.png" width="200px">
+<img src="images/cjaycee.png" width="200px">
 
-[[github](http://github.com/johndoe)]
+[[github](http://github.com/cjaycee)]
 [[portfolio](team/johndoe.md)]
 
 * Role: Developer
-* Responsibilities: Dev Ops + Threading
+* Responsibilities: Scheduling and tracking
 
-### James Doe
+### Jamunarani Prabhu Pranav
 
-<img src="images/johndoe.png" width="200px">
+<img src="images/pranav3142.png" width="200px">
 
-[[github](http://github.com/johndoe)]
+[[github](http://github.com/pranav3142)]
 [[portfolio](team/johndoe.md)]
 
 * Role: Developer
-* Responsibilities: UI
+* Responsibilities: Integration
+
+### Samuel Tan
+
+<img src="images/samueltann.png" width="200px">
+
+[[github](https://github.com/samueltann)]
+[[portfolio](team/johndoe.md)]
+
+* Role: Developer
+* Responsibilities: Code Quality
