@@ -107,6 +107,13 @@ public class Person {
     }
 
     /**
+     * Returns the value of the remark associated with the person.
+     */
+    public String getRemarkValue() {
+        return remark.value;
+    }
+
+    /**
      * Returns the list of lessons associated with the person.
      */
     public LessonList getLessonList() {

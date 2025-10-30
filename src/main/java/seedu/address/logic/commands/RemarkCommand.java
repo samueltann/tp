@@ -71,7 +71,7 @@ public class RemarkCommand extends Command {
     }
 
     private Remark getRemark(Person personToEdit) {
-        String existingRemarkValue = personToEdit.getRemark().value;
+        String existingRemarkValue = personToEdit.getRemarkValue();
         String newRemarkValue = remark.value;
 
         String combinedRemarkValue;
