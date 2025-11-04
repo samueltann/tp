@@ -363,7 +363,7 @@ Use this to quickly find all students in a particular subject or with a specific
 </div>
 
 <div markdown="span" class="alert alert-primary">:warning: Common Mistake:
-Searching for partial words - the filter only matches complete tag words.
+The filter only matches complete attribute values, it does not work for partial values.
 </div>
 
 ![Result of filtering students](images/filterUI.png)
@@ -623,8 +623,8 @@ Clears all entries from ClassRosterPro.
 
 Format: `clear`
 
-<div markdown="span" class="alert alert-primary">:warning: Common Mistake:
-Double-check the index before deleting, as this action cannot be undone.
+<div markdown="span" class="alert alert-warning">:exclamation: Caution:
+This command deletes all student data permanently. Use it with care.
 </div>
 
 ### Exiting the program : `exit`
