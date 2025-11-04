@@ -306,7 +306,7 @@ Updates selected fields of an existing student without replacing the whole entry
 
 #### Parameters
 
-`edit INDEX [n/NAME] [p/PHONE] [e/EMAIL] [a/ADDRESS] [t/TAG]... [attr/KEY=VALUE]...`
+`edit INDEX [n/NAME] [p/PHONE] [e/EMAIL] [a/ADDRESS] [t/TAG]... [attr/KEY=VALUE[, VALUE2]]...`
 
 - `INDEX` — required, 1-based. Identifies the student in the current filtered list.
 - `n/`, `p/`, `e/`, `a/` — optional single-occurrence fields; if present, must pass the same validators as `add`.
@@ -1687,7 +1687,7 @@ This section provides guidance to manually verify the new or modified features o
 
 7. Preserve search results across commands: Executing follow-up commands such as `edit` or `schedule` resets the roster to show all students. We plan to retain the active predicate so tutors stay within their filtered context.
 
-8. Redesign the grade command syntax so each element uses a dedicated prefix (e.g., `subject/`, `assessment/`, `score/`). This will simplify parsing, reduce delimiter bugs, and make future validation clearer.
+8. Redesign the `edit` command so that it applies a last-value-wins rule for duplicate attribute keys in command input.
 
 9. Tighten grade score validation (e.g., reject negative or out-of-range values) so that only sensible numeric scores are persisted.
 
