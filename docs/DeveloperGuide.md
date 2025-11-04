@@ -899,15 +899,14 @@ Key classes: `FilterCommand`, `Model`, `AttributeContainsPredicate`.
 
 #### What it does
 
-Finds and lists all students whose name, email, address, or tag contains any of the specified keywords.  
-The search is **case-insensitive** and supports multiple keywords, returning all matches where any field partially matches at least one keyword.  
-It serves as a command-line complement to the real-time **Quick Search** bar.
+Finds and lists all students whose name, email or phone number contains any of the specified keywords.  
+The search is **case-insensitive** and supports multiple keywords, returning all matches where any field partially matches at least one keyword.
 
 #### Parameters
 
 `search KEYWORD [MORE_KEYWORDS]...`
 
-- `KEYWORD` — required, at least one. Case-insensitive substring matched against the student's name, email, address, and tag fields.
+- `KEYWORD` — required, at least one. Case-insensitive substring matched against the student's name, email, or phone number fields.
 
 #### Overview
 
@@ -950,12 +949,12 @@ The sequence diagram captures the flow of `SearchCommand#execute(Model)`:
 - The command is resilient to malformed input such as mixed spacing or special characters in keywords.
 
 #### Design Considerations
-- **Search Scope**: Includes name, email, address, and tags. Provides flexibility and matches user expectations of a global search
+- **Search Scope**: Includes name, email, and phone number. Provides flexibility and matches user expectations of a global search
 - **Case Sensitivity**:  Case-insensitive.  Reduces user friction; tutors do not need to match exact capitalization
 - **Partial Match**: Substring-based. Enables fast, natural filtering without requiring exact terms
 - **Predicate Reuse**: Uses `PersonContainsKeywordPredicate`. Keeps filtering logic encapsulated and testable 
 - **Performance**: Uses JavaFX `FilteredList`. Efficient, as no deep copies or re-parsing occur
-- **User Experience**:  Command mirrors Quick Search bar. Provides both CLI and UI pathways for filtering.
+- **User Experience**: Provides both CLI pathways for filtering.
 
 --------------------------------------------------------------------------------------------------------------------
 
@@ -975,7 +974,7 @@ The sequence diagram captures the flow of `SearchCommand#execute(Model)`:
 
 ### **Target User Profile**
 
-Private tutors who manage many students without the infrastructure of a tuition agency and need a fast, keyboard-driven desktop tool to keep contacts, lessons, attendance, grades, and notes organized.
+Private tutors who manage many students without the infrastructure of a tuition agency and need a fast, keyboard-driven desktop tool to keep contacts, lessons, attendance, and grades record organized.
 
 ### **Value Proposition**
 
@@ -1090,6 +1089,7 @@ ClassRosterPro reduces tutors' admin load by consolidating contacts, tagging/fil
 * 1h. ClassRosterPro detects duplicate lesson.
    * 1h1. ClassRosterPro shows error message for lesson duplication.\
      Use case ends.
+
 ---
 
 ### **UC03 - Record Attendance for Lesson**
@@ -1150,12 +1150,12 @@ ClassRosterPro reduces tutors' admin load by consolidating contacts, tagging/fil
 * 1d. ClassRosterPro detects invalid subject-assessment format.
    * 1d1. ClassRosterPro shows error message indicating missing components.\
      Use case ends.
-* 1e. ClassRosterPro detects duplicate subject-assessment in command.
-   * 1e1. ClassRosterPro shows error message indicating duplicate grade detected.\
-     Use case ends.
+* 1e. ClassRosterPro detects duplicate subject-assessment in one command.
+  * 1e1. ClassRosterPro shows error message indicating duplicate grade detected.\
+    Use case ends.
 * 1f. ClassRosterPro detects invalid score value.
-   * 1f1. ClassRosterPro shows error message for invalid score value.\
-     Use case ends.
+  * 1f1. ClassRosterPro shows error message for invalid score value.\
+    Use case ends. 
 
 ---
 
