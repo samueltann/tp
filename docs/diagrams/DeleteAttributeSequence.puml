@@ -60,7 +60,7 @@ else valid index
   activate Model
   Model --> DeleteAttributeCommand
   deactivate Model
-  DeleteAttributeCommand -> Model : updateFilteredPersonList()
+  DeleteAttributeCommand -> Model : updateFilteredPersonList(PREDICATE_SHOW_ALL_PERSONS)
   activate Model
   Model --> DeleteAttributeCommand
   deactivate Model
