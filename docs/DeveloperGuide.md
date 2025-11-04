@@ -775,8 +775,6 @@ Adds or updates custom key–value attributes for a student so tutors can captur
 
 ![Add Attribute command activity](images/AddAttributeActivityDiagram.png)
 
-<div markdown="span" class="alert alert-info">:information_source: **Note:** The current implementation class is `TagCommand` along with `TagCommandParser`. We plan to rename them to `AddAttributeCommand` and `AddAttributeCommandParser` to avoid confusion with person _tags_.  
-</div>
 
 #### Execution behaviour
 
@@ -821,15 +819,11 @@ Removes attribute keys (and their values) from a student so tutors can retire ou
 
 ![Delete Attribute command activity](images/DeleteAttributeActivityDiagram.png)
 
-<div markdown="span" class="alert alert-info">:information_source: **Note:** The current implementation class is `TagCommand` along with `TagCommandParser`. We plan to rename them to `AddAttributeCommand` and `AddAttributeCommandParser` to avoid confusion with person _tags_.  
-</div>
 
 #### Execution behaviour
 
 ![Delete Attribute command execution sequence](images/DeleteAttributeSequence.png)
 
-<div markdown="span" class="alert alert-info">:information_source: **Note:** The current implementation class is `TagCommand` along with `TagCommandParser`. We plan to rename them to `AddAttributeCommand` and `AddAttributeCommandParser` to avoid confusion with person _tags_.  
-</div>
 
 #### Validation and error handling
 
