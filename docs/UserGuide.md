@@ -363,7 +363,7 @@ Use this to quickly find all students in a particular subject or with a specific
 </div>
 
 <div markdown="span" class="alert alert-primary">:warning: Common Mistake:
-Searching for partial words - the filter only matches complete tag words.
+The filter only matches complete attribute values, it does not work for partial values.
 </div>
 
 ![Result of filtering students](images/filterUI.png)
@@ -623,8 +623,8 @@ Clears all entries from ClassRosterPro.
 
 Format: `clear`
 
-<div markdown="span" class="alert alert-primary">:warning: Common Mistake:
-Double-check the index before deleting, as this action cannot be undone.
+<div markdown="span" class="alert alert-warning">:exclamation: Caution:
+This command deletes all student data permanently. Use it with care.
 </div>
 
 ### Exiting the program : `exit`
@@ -710,7 +710,7 @@ Action | Format, Examples
 **Add** | `add n/NAME p/PHONE_NUMBER e/EMAIL a/ADDRESS [t/TAG]…​` <br> e.g., `add n/James Ho p/22224444 e/jamesho@example.com a/123, Clementi Rd, 1234665 t/friend t/colleague`
 **Clear** | `clear`
 **Delete** | `delete INDEX`<br> e.g., `delete 3`
-**Edit** | `edit INDEX [n/NAME] [p/PHONE_NUMBER] [e/EMAIL] [a/ADDRESS] [t/TAG]…​`<br> e.g.,`edit 2 n/James Lee e/jameslee@example.com`
+**Edit** | `edit INDEX [n/NAME] [p/PHONE_NUMBER] [e/EMAIL] [a/ADDRESS] [t/TAG] [attr/KEY=VALUE1[,VALUE2]]…​`<br> e.g.,`edit 2 n/James Lee e/jameslee@example.com`
 **Filter** | `filter attr/KEY=VALUE[,VALUE2]…​ [attr/KEY2=VALUE2]…​`<br> e.g., `filter attr/subject=math,science attr/age=16`
 **Grade** | `grade INDEX sub/SUBJECT/ASSESSMENT/SCORE [sub/SUBJECT2/ASSESSMENT2/SCORE2]…​`<br> e.g., `grade 2 sub/MATH/WA1/89 sub/SCIENCE/Quiz1/95`
 **Schedule Lesson** | `schedule INDEX start/START_TIME end/END_TIME date/START_DATE [date2/END_DATE] sub/SUBJECT`<br> e.g., `schedule 1 start/14:00 end/15:00 date/2025-09-20 sub/science`
