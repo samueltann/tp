@@ -1150,9 +1150,12 @@ ClassRosterPro reduces tutors' admin load by consolidating contacts, tagging/fil
 * 1d. ClassRosterPro detects invalid subject-assessment format.
    * 1d1. ClassRosterPro shows error message indicating missing components.\
      Use case ends.
-* 1e. ClassRosterPro detects invalid score value.
-   * 1e1. ClassRosterPro shows error message for invalid score value.\
-     Use case ends.
+* 1e. ClassRosterPro detects duplicate subject-assessment in one command.
+  * 1e1. ClassRosterPro shows error message indicating duplicate grade detected.\
+    Use case ends.
+* 1f. ClassRosterPro detects invalid score value.
+  * 1f1. ClassRosterPro shows error message for invalid score value.\
+    Use case ends. 
 
 ---
 
