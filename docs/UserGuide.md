@@ -542,7 +542,7 @@ Format: `grade INDEX sub/SUBJECT/ASSESSMENT/SCORE [sub/SUBJECT2/ASSESSMENT2/SCOR
 * The index refers to the index number shown in the displayed student list.
 * The index **must be a positive integer** 1, 2, 3, …​
 * If a subject-assessment combination already exists for the student, the new score will **overwrite** the existing score.
-* If the same subject-assessment appears multiple times in one command, the **last occurrence** wins.
+* If the same subject-assessment appears multiple times in one command, a duplicate error is thrown. 
 * At least one `sub/` prefix must be provided.
 * Subject, assessment, and score values cannot be empty.
 
