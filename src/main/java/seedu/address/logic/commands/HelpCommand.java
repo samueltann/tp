@@ -24,7 +24,7 @@ public class HelpCommand extends Command {
             "",
             "STUDENT COMMANDS:",
             " - add n/<NAME> p/<PHONE> e/<EMAIL> a/<ADDRESS> [t/TAG]...",
-            " - edit <INDEX> [n/NAME] [p/PHONE] [e/EMAIL] [a/ADDRESS] [t/TAG]...",
+            " - edit <INDEX> [n/NAME] [p/PHONE] [e/EMAIL] [a/ADDRESS] [t/TAG] [attr/KEY=VALUE[,VALUE2...]]...",
             " - delete <INDEX>",
             " - search <KEYWORD>",
             "",
