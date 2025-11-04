@@ -31,10 +31,8 @@ activate GradeCommandParser
 
 alt duplicate grade detected
   GradeCommandParser --> LogicManager : throw ParseException("Duplicate grade detected...")
-  deactivate GradeCommandParser
 else invalid format
   GradeCommandParser --> LogicManager : throw ParseException("Incorrect format...")
-  deactivate GradeCommandParser
 else valid
   create GradeCommand
   GradeCommandParser -> GradeCommand
@@ -42,10 +40,10 @@ else valid
   GradeCommand --> GradeCommandParser : g
   deactivate GradeCommand
 
-  GradeCommandParser --> AddressBookParser : g
-  deactivate GradeCommandParser
+  GradeCommandParser --> AddressBookParser --: g
   'Hidden arrow to position the destroy marker below the end of the activation bar.
   GradeCommandParser -[hidden]-> AddressBookParser
+
   destroy GradeCommandParser
 
   AddressBookParser --> LogicManager : g
@@ -60,7 +58,7 @@ else valid
 
   alt invalid index
     GradeCommand --> LogicManager : throw CommandException(MESSAGE_INVALID_PERSON_DISPLAYED_INDEX)
-    deactivate GradeCommand
+
   else valid
     GradeCommand -> Model : setPerson(personToEdit, editedPerson)
     Model --> GradeCommand
@@ -75,7 +73,7 @@ else valid
     CommandResult --> GradeCommand
     deactivate CommandResult
 
-    GradeCommand --> LogicManager : r
+    GradeCommand --> LogicManager -- : r
     deactivate GradeCommand
   end
 end

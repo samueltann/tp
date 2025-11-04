@@ -65,7 +65,7 @@ else valid index
   activate Model
   Model --> TagCommand
   deactivate Model
-  TagCommand -> Model : updateFilteredPersonList()
+  TagCommand -> Model : updateFilteredPersonList(PREDICATE_SHOW_ALL_PERSONS)
   activate Model
   Model --> TagCommand
   deactivate Model
@@ -76,7 +76,7 @@ else valid index
   CommandResult --> TagCommand
   deactivate CommandResult
 
-  TagCommand --> LogicManager : r
+  TagCommand --> LogicManager --: r
 end
 deactivate TagCommand
 

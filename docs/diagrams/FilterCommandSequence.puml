@@ -32,7 +32,7 @@ activate FilterCommandParser
 
 alt invalid format
   FilterCommandParser --> LogicManager : throw ParseException("Incorrect format...")
-  deactivate FilterCommandParser
+
 else valid
   create Predicate
   FilterCommandParser -> Predicate
@@ -72,7 +72,7 @@ else valid
   CommandResult --> FilterCommand
   deactivate CommandResult
 
-  FilterCommand --> LogicManager : r
+  FilterCommand --> LogicManager -- : r
   deactivate FilterCommand
 end
 

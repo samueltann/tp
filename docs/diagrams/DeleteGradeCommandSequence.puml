@@ -31,7 +31,6 @@ activate DeleteGradeCommandParser
 
 alt invalid format
   DeleteGradeCommandParser --> LogicManager : throw ParseException("Use sub/SUBJECT/ASSESSMENT")
-  deactivate DeleteGradeCommandParser
 else valid
   create DeleteGradeCommand
   DeleteGradeCommandParser -> DeleteGradeCommand
@@ -39,10 +38,10 @@ else valid
   DeleteGradeCommand --> DeleteGradeCommandParser : d
   deactivate DeleteGradeCommand
 
-  DeleteGradeCommandParser --> AddressBookParser : d
-  deactivate DeleteGradeCommandParser
+  DeleteGradeCommandParser --> AddressBookParser -- : d
   'Hidden arrow to position the destroy marker below the end of the activation bar.
   DeleteGradeCommandParser -[hidden]-> AddressBookParser
+  deactivate DeleteGradeCommand
   destroy DeleteGradeCommandParser
 
   AddressBookParser --> LogicManager : d
@@ -57,10 +56,8 @@ else valid
 
   alt invalid index
     DeleteGradeCommand --> LogicManager : throw CommandException(MESSAGE_INVALID_PERSON_DISPLAYED_INDEX)
-    deactivate DeleteGradeCommand
   else grade not found
     DeleteGradeCommand --> LogicManager : throw CommandException(MESSAGE_GRADE_NOT_FOUND)
-    deactivate DeleteGradeCommand
   else valid
     DeleteGradeCommand -> Model : setPerson(personToEdit, editedPerson)
     Model --> DeleteGradeCommand
@@ -72,7 +69,7 @@ else valid
     CommandResult --> DeleteGradeCommand
     deactivate CommandResult
 
-    DeleteGradeCommand --> LogicManager : r
+    DeleteGradeCommand --> LogicManager -- : r
     deactivate DeleteGradeCommand
   end
 end
